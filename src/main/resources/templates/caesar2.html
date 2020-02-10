@@ -16,12 +16,13 @@
     <li> Enter the desired letter</li>
     <li> Click and observe the magic!</li>
 </ol>
-<form action="#" th:action="@{/caesar}" th:object="${caesar}" method="post">
+<form  action="#" th:action="@{/caesar}" th:object="${caesar}" method="post">
     Text:<br>
     <input type="text" th:text="${klartext}"><br>
     Letter:<br>
     <input type="text" th:field="${letter}"><br>
-
+    Secret Code:<br>
+    <input type="text" th:field="$geheimtext"><br>
 </form>
 <input type="button" onclick="alert('Hello World!')" value="Click Me!">
 
