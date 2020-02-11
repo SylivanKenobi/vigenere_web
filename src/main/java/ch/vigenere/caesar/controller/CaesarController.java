@@ -1,7 +1,7 @@
 package ch.vigenere.caesar.controller;
 
-import model.Buchstabe;
-import model.Caesar;
+import ch.vigenere.caesar.model.Buchstabe;
+import ch.vigenere.caesar.model.Caesar;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,14 +15,15 @@ public class CaesarController {
 
     @GetMapping
     public String caesar(Model model) {
+        model.addAttribute("caesar", new Caesar());
         return "caesar";
     }
-    @PostMapping("/caesarInput")
-    public String getInput(@ModelAttribute Caesar klartext, Buchstabe buchstabe, Model model){
-        model.addAttribute ("klartext", klartext);
-        model.addAttribute("letter",buchstabe);
-        model.addAttribute("geheimtext", "Test");
-        return "caesar2";
+
+    @PostMapping
+    public String getInput(@ModelAttribute Caesar caesar, Model model) {
+        caesar.encrypted = "Juhui";
+        model.addAttribute("caesar", caesar);
+        return "caesar";
     }
 
 }

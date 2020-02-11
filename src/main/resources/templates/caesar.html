@@ -18,11 +18,12 @@
 </ol>
 <form action="#" th:action="@{/caesar}" th:object="${caesar}" method="post">
     Text:<br>
-    <input type="text" th:text="${klartext}"><br>
+    <input type="text" th:field="*{cleartext}"><br>
     Letter:<br>
-    <input type="text" th:field="${letter}"><br>
-    <input th:type="submit">
+    <input type="text" th:field="*{key}"><br>
+    Secret Code:<br>
+    <input type="text" th:field="*{encrypted}"><br>
+    <button>Click Me</button>
 </form>
-
 </body>
 </html>
