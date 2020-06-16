@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -16,7 +16,7 @@
     <li> Enter the desired letter</li>
     <li> Click and observe the magic!</li>
 </ol>
-<form action="#" th:action="@{/caesar}" th:object="${caesar}" method="post">
+<form th:action="@{/caesar}" th:object="${caesar}" method="post" id="caesarForm">
     Text:<br>
     <input type="text" th:field="*{cleartext}"><br>
     Letter:<br>

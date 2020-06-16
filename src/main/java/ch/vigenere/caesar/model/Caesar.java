@@ -9,8 +9,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class Caesar {
 
-    public String cleartext;
-    public String key;
-    public String encrypted;
+    private String cleartext;
+    private String key;
+    private String encrypted;
 
 }

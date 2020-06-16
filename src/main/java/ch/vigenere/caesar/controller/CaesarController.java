@@ -1,6 +1,5 @@
 package ch.vigenere.caesar.controller;
 
-import ch.vigenere.caesar.model.Buchstabe;
 import ch.vigenere.caesar.model.Caesar;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -21,7 +20,7 @@ public class CaesarController {
 
     @PostMapping
     public String getInput(@ModelAttribute Caesar caesar, Model model) {
-        caesar.encrypted = "Juhui";
+        caesar.setEncrypted("Juhui");
         model.addAttribute("caesar", caesar);
         return "caesar";
     }
